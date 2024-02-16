@@ -16,7 +16,7 @@
       </div>
       <div class="loggedIn"> <!-- TODO: Show me only to logged-in users -->
         <a class="welcomeBack">
-          <span class="username">Welcome back, {{ Username }}!</span>
+          <span class="username">Welcome back, <!--Username Done-->!</span>
           <span class="material-symbols-outlined md-18">person</span></a>
         </a>
       </div>
@@ -37,7 +37,7 @@
   <h2>Rooms</h2>
   <div class="rooms">
     <div class="roomList">
-      <a>{{room.id}}: <strong>{{room.name}}</strong></a>
+      <!-- <a>{{room.id}}: <strong>{{room.name}}</strong></a> -->
     </div>
     <div class="noRooms">No rooms yet! You get to be first!</div> <!-- TODO: Show me only if roomList is empty -->
   </div>
@@ -62,12 +62,12 @@
       <div class="alignedForm">
         <label for="username">Username: </label>
         <input name="username" value="{{ username }}">
-        <button>update</button>
+        <button class="updateUsernameButton">update</button>
         <label for="password">Password: </label>
-        <input type="password" name="password" value="{{ password }}">
-        <button>update</button>
+        <input type="password" name="password" value="">
+        <button class="updatePasswordButton">update</button>
         <label for="repeatPassword">Repeat: </label>
-        <input type="password" name="repeatPassword" value="{{ password }}">
+        <input type="password" name="repeatPassword" value="">
         <error>Passwords don't match</error>
         <button class="exit goToSplash">Cool, let's go!</button>
         <button class="exit logout">Log out</button>
@@ -119,7 +119,7 @@
         </h3>
       </div>
       Invite users to this chat at:
-      <a>/rooms/{{ room_id }}</a>
+      <a class="inviteLink">/rooms/{{ room_id }}</a>
     </div>
     <div class="loginHeader">
       <div class="loggedIn">
